@@ -1,6 +1,6 @@
 node {
     checkout scm
-    //cleanWs()
+    cleanWs()
     docker.withRegistry('https://hub.docker.com') {
 
         docker.image('kolt2050/jenkins_docker_root').inside {
