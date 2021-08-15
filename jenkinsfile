@@ -8,4 +8,8 @@ node {
            sh 'echo 1234'
         }
     }
+    stage{
+        println("HELLO")
+        sh 'docker --version'
+    }
 }
