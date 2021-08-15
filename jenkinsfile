@@ -19,6 +19,7 @@ node {
            pwd
            cat Makefile
            sed 's/-it/-i/' Makefile
+           sed 's/-t/ /' Makefile
            echo "---------------build docs--------------"
            make build-docs
            echo "---------------site is here--------------"
