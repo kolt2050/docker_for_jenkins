@@ -22,10 +22,9 @@ node {
            pwd && ls -la
            cd edp-install
            echo "---------we in edp-install----------"
-           #$PWD = echo `pwd`
            pwd sed -i 's/docker run --rm -it/docker run --rm -i/' Makefile 
-           docker images 
            cat Makefile 
+
            make build-docs echo "---------------site is here--------------" 
            ls -la ../ mv site ../
            #git checkout gh-pages
