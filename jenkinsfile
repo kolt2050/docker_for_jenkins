@@ -10,8 +10,11 @@ node {
     }
     stage('Clone repo') {
         println("HELLO")
-        sh 'docker --version'
-        sh 'git clone https://github.com/epam/edp-install.git'
-        sh 'cd edp-install && ls -la'
+        sh """
+           docker --version
+           git clone https://github.com/epam/edp-install.git
+           cd edp-install && ls -la
+           """
+        
     }
 }
