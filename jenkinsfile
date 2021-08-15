@@ -40,7 +40,7 @@ node {
            #echo "Clear gh-pages"
            #cp ../site .
            #ls -la
-           """
+#           """
         
     }
 }
