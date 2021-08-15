@@ -5,7 +5,7 @@ node {
 
         docker.image('kolt2050/jenkins_docker').inside {
            sh 'docker --version' 
-           sh 'echo 123'
+           sh 'echo 1234'
         }
     }
 }
