@@ -7,6 +7,7 @@ node {
            sh 'docker --version'
            sh 'echo 1234'
            sh 'id'
+           sh 'docker ps -a && docker images'
         }
     }
     
