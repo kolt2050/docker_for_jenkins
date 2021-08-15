@@ -11,6 +11,7 @@ node {
     
     stage('Clone repo') {
         sh """#!/bin/bash
+           sudo su
            docker ps -a && docker images
            echo "---------------ID--------------"
            id
