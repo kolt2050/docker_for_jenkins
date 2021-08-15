@@ -24,7 +24,8 @@ node {
            echo "---------we in edp-install----------"
            pwd 
 
-           sed -i 's/mkdocs-awesome-pages-plugin/mkdocs-awesome-pages-plugin '\n' USER jenkins /' ./hack/mkdocs/Dockerfile
+           #sed -i 's/mkdocs-awesome-pages-plugin/mkdocs-awesome-pages-plugin '\n' USER jenkins /' ./hack/mkdocs/Dockerfile
+           echo "USER jenkins" >> ./hack/mkdocs/Dockerfile
            cat ./hack/mkdocs/Dockerfile
 
            #sed -i 's/docker build -t edp-docs/docker build edp-docs/' Makefile
