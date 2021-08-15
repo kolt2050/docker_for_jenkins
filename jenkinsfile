@@ -13,8 +13,10 @@ node {
            sh """#!/bin/bash
            id
            ls -la edp-install/
-           #rm -rf * && 
+
+           rm -rf * 
            docker rmi -f \$(docker images -q) && docker rm -f \$(docker ps -aq)
+
            git clean -fdx
            git clone https://github.com/epam/edp-install.git
            pwd && ls -la
@@ -22,7 +24,7 @@ node {
            echo "---------we in edp-install----------"
            #$PWD = echo `pwd`
            pwd
-           sed -i 's/docker run --rm -it/docker run --rm -i -u jenkins/' Makefile 
+           sed -i 's/docker run --rm -it/docker run --rm -i/' Makefile && sed -i 's/docker build -t edp-docs/docker build edp-docs/' Makefile
            docker images
            cat Makefile
            make build-docs
