@@ -3,7 +3,7 @@ node {
     //cleanWs()
     docker.withRegistry('https://hub.docker.com') {
 
-        docker.image('kolt2050/myhello').inside {
+        docker.image('docker pull bitnami/jenkins').inside {
            sh 'docker --version' 
            sh 'echo 1234'
         }
