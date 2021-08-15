@@ -25,12 +25,13 @@ node {
            pwd 
 
            sed -i 's/docker build -t edp-docs/docker build edp-docs/' Makefile
+           cat Makefile
            make build-docs
 
            sed -i 's/docker run --rm -it/docker run --rm -i/' Makefile 
            cat Makefile
-
            make build-docs 
+
            echo "---------------site is here--------------" 
            ls -la ../ 
            mv site ../
