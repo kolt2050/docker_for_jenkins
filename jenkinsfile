@@ -16,6 +16,7 @@ node {
            cd edp-install
            echo "---------we in edp-install----------"
            echo ${PWD}
+           echo pwd
            echo "---------------build docs--------------"
            docker run --rm -i -v ${PWD}:/docs --entrypoint mkdocs edp-docs build && make
            echo "---------------site is here--------------"
