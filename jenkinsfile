@@ -21,7 +21,10 @@ node {
            git clone https://github.com/epam/edp-install.git
            pwd && ls -la
            cd edp-install
+           
            echo "---------we in edp-install----------"
+           docker images
+           docker ps -all
            pwd 
 
            sed -i 's/docker run --rm -it/docker run --rm -i/' Makefile 
