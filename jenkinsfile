@@ -8,7 +8,7 @@ node {
            sh 'echo 1234'
         }
     }
-    stage{
+    stage('Build') {
         println("HELLO")
         sh 'docker --version'
     }
