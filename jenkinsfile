@@ -25,12 +25,12 @@ node {
            pwd 
 
            #sed -i 's/mkdocs-awesome-pages-plugin/mkdocs-awesome-pages-plugin '\n' USER jenkins /' ./hack/mkdocs/Dockerfile
-           echo "RUN useradd -ms /bin/bash jenkins \nUSER jenkins" >> ./hack/mkdocs/Dockerfile
-           cat ./hack/mkdocs/Dockerfile
+           #echo "RUN useradd -ms /bin/bash jenkins \nUSER jenkins" >> ./hack/mkdocs/Dockerfile
+           #cat ./hack/mkdocs/Dockerfile
 
-           #sed -i 's/docker build -t edp-docs/docker build edp-docs/' Makefile
-           #cat Makefile
-           #make edp-docs-image
+           sed -i 's/docker build -t edp-docs/docker build edp-docs -u jenkins/' Makefile
+           cat Makefile
+           make edp-docs-image
 
            sed -i 's/docker run --rm -it/docker run --rm -i/' Makefile 
            cat Makefile
