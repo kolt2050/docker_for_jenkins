@@ -10,8 +10,8 @@ node {
     }
     stage('Clone repo') {
         println("HELLO")
-    #       sh """#!/bin/bash
-     #      echo "---------------ID--------------"
+           sh """#!/bin/bash
+           echo "---------------ID--------------"
       #     id
            #ls -la edp-install/
 #
@@ -40,7 +40,7 @@ node {
            #echo "Clear gh-pages"
            #cp ../site .
            #ls -la
-#           """
+           """
         
     }
 }
