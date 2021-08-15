@@ -11,7 +11,7 @@ node {
     stage('Clone repo') {
         println("HELLO")
            sh """#!/bin/bash
-           sudo rm -rf * && git clone https://github.com/epam/edp-install.git
+           rm -rf * && git clone https://github.com/epam/edp-install.git
            pwd && ls -la
            cd edp-install
            echo "---------we in edp-install----------"
