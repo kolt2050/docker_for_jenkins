@@ -3,14 +3,14 @@ node {
     //cleanWs()
     docker.withRegistry('https://hub.docker.com') {
 
-        docker.image('bitnami/jenkins').inside {
+        docker.image('kolt2050/jenkins_docker_root').inside {
            sh 'docker --version' 
            sh 'echo 1234'
         }
     }
-    stage('Clone repo') {
-        println("HELLO")
-           sh """#!/bin/bash
+//    stage('Clone repo') {
+//        println("HELLO")
+//           sh """#!/bin/bash
            echo "---------------ID--------------"
       #     id
            #ls -la edp-install/
@@ -40,7 +40,7 @@ node {
            #echo "Clear gh-pages"
            #cp ../site .
            #ls -la
-           """
+//           """
         
-    }
+//    }
 }
