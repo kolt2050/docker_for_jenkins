@@ -4,7 +4,8 @@ node {
     docker.withRegistry('https://hub.docker.com') {
 
         docker.image('kolt2050/jenkins_docker').inside {
-            sh 'echo 123'
+           sh 'docker --version' 
+           sh 'echo 123'
         }
     }
 }
