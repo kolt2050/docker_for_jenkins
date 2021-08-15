@@ -21,8 +21,8 @@ node {
            echo "---------we in edp-install----------"
            #$PWD = echo `pwd`
            pwd
-           cat Makefile
            sed -i 's/-it/-i/' Makefile 
+           cat Makefile
            make build-docs
            echo "---------------site is here--------------"
            ls -la ../
