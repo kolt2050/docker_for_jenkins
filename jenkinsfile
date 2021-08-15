@@ -13,7 +13,7 @@ node {
            //sh 'git init .'
            //sh 'git remote add -t \\* -f origin https://github.com/epam/edp-install.git'
            //sh 'git checkout main'
-           sh 'rm -rf .* && git clone https://github.com/epam/edp-install.git'
+           sh 'rm -rf * && git clone https://github.com/epam/edp-install.git'
            sh 'ls -la'
            sh 'cd edp-install'
            sh 'ls -la'
