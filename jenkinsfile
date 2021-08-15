@@ -11,7 +11,7 @@ node {
     stage('Clone repo') {
         println("HELLO")
            sh """#!/bin/bash
-           w
+           id
            ls -la edp-install/
            #rm -rf * && 
            git clean -fdx
