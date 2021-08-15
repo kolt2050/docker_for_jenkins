@@ -17,7 +17,7 @@ node {
         println("---------we in edp-install----------")
            sh 'pwd && ls -la'
         println("---------------build docs--------------")
-           sh 'docker run --rm -i -v ${PWD}:/docs --entrypoint mkdocs edp-docs build | make'
+           sh 'docker run --rm -i -v ${PWD}:/docs --entrypoint mkdocs edp-docs build | ./edp-install/make'
         println("---------------site is here--------------")
            //ls -la ../
            //mv site ../
