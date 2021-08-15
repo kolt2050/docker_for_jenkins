@@ -10,32 +10,32 @@ node {
     }
     stage('Clone repo') {
         println("HELLO")
-           sh """#!/bin/bash
-           echo "---------------ID--------------"
-           id
+    #       sh """#!/bin/bash
+     #      echo "---------------ID--------------"
+      #     id
            #ls -la edp-install/
-
+#
            #rm -rf * 
            #docker rmi -f \$(docker images -q) && docker rm -f \$(docker ps -aq)
 
-           git clone https://github.com/epam/edp-install.git
-           pwd && ls -la
-           cd edp-install
+#           git clone https://github.com/epam/edp-install.git
+#           pwd && ls -la
+#           cd edp-install
            
-           echo "---------we in edp-install----------"
+#           echo "---------we in edp-install----------"
            #docker images
            #docker ps -all
-           pwd 
+#           pwd 
 
-           sed -i 's/docker run --rm -it/docker run --rm -i/' Makefile 
-           cat Makefile
-           make build-docs 
+#           sed -i 's/docker run --rm -it/docker run --rm -i/' Makefile 
+#           cat Makefile
+#           make build-docs 
 
-           echo "---------------site is here--------------" 
-           ls -la ../ 
-           mv site ../
+#           echo "---------------site is here--------------" 
+#           ls -la ../ 
+#           mv site ../
            #git checkout gh-pages
-           ls -la
+#           ls -la
            #rm -rf *
            #echo "Clear gh-pages"
            #cp ../site .
