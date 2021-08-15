@@ -12,7 +12,8 @@ node {
         println("HELLO")
         sh"""#!/bin/bash
            docker --version
-           git clone https://github.com/epam/edp-install.git
+           git clone 'https://github.com/epam/edp-install.git'
+           
            cd edp-install
            ls -la
            echo "---------------build docs--------------"
