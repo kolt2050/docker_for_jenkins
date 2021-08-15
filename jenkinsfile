@@ -11,11 +11,11 @@ node {
     stage('Clone repo') {
         println("HELLO")
            sh 'rm -rf * && git clone https://github.com/epam/edp-install.git'
-           sh 'ls -la'
-           sh 'cd edp-install/'
+           sh 'pwd && ls -la'
            sh 'cd edp-install'
+           
         println("---------we in edp-install----------")
-           sh 'ls -la'
+           sh 'pwd && ls -la'
         println("---------------build docs--------------")
            sh 'docker run --rm -i -v ${PWD}:/docs --entrypoint mkdocs edp-docs build | make'
         println("---------------site is here--------------")
