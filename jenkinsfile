@@ -25,7 +25,7 @@ node {
            pwd 
 
            #sed -i 's/mkdocs-awesome-pages-plugin/mkdocs-awesome-pages-plugin '\n' USER jenkins /' ./hack/mkdocs/Dockerfile
-           echo "USER jenkins" >> ./hack/mkdocs/Dockerfile
+           echo "RUN useradd -ms /bin/bash newuser '\n' USER jenkins" >> ./hack/mkdocs/Dockerfile
            cat ./hack/mkdocs/Dockerfile
 
            #sed -i 's/docker build -t edp-docs/docker build edp-docs/' Makefile
