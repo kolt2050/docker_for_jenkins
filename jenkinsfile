@@ -10,16 +10,14 @@ node {
     }
     stage('Clone repo') {
         println("HELLO")
-           //sh 'git init .'
-           //sh 'git remote add -t \\* -f origin https://github.com/epam/edp-install.git'
-           //sh 'git checkout main'
            sh 'rm -rf * && git clone https://github.com/epam/edp-install.git'
            sh 'ls -la'
            sh 'cd edp-install'
+        println("---------we in edp-install----------")
            sh 'ls -la'
-           sh 'echo "---------------build docs--------------"'
+        println("---------------build docs--------------")
            sh 'docker run --rm -i -v ${PWD}:/docs --entrypoint mkdocs edp-docs build | make'
-           sh 'echo "---------------site is here--------------"'
+        println("---------------site is here--------------")
            //ls -la ../
            //mv site ../
            //git checkout gh-pages
