@@ -1,0 +1,10 @@
+node {
+    checkout scm
+
+    docker.withRegistry('https://hub.docker.com') {
+
+        docker.image('kolt2050/jenkins_docker').inside {
+            sh 'echo 123'
+        }
+    }
+}
