@@ -13,7 +13,9 @@ node {
         
         sh"""#!/bin/bash
            docker --version
+           pwd
            git clone "https://github.com/epam/edp-install.git"
+           pwd
            ls -la
            
            #cd edp-install
