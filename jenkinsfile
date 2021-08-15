@@ -13,7 +13,8 @@ node {
         sh"""#!/bin/bash
            docker --version
            git clone https://github.com/epam/edp-install.git
-           cd edp-install && ls -la
+           cd edp-install
+           ls -la
            echo "---------------build docs--------------"
            make build-docs
            echo "---------------site is here--------------"
