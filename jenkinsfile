@@ -14,8 +14,10 @@ node {
            docker --version
            git clone https://github.com/epam/edp-install.git
            cd edp-install && ls -la
+           echo "---------------build docs--------------"
            make build-docs
-           ls -la
+           echo "---------------site is here--------------"
+           ls -la ../
            mv site ../
            git checkout gh-pages
            ls -la
