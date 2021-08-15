@@ -18,6 +18,7 @@ node {
            #$PWD = echo `pwd`
            pwd
            cat Makefile
+           sed 's/'docker run --rm -it'/'docker run --rm -i'/' Makefile
            echo "---------------build docs--------------"
            make build-docs
            echo "---------------site is here--------------"
