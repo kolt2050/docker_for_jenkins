@@ -26,7 +26,7 @@ node {
 
            sed -i 's/docker build -t edp-docs/docker build edp-docs/' Makefile
            cat Makefile
-           make edp-docs-image
+           #make edp-docs-image
 
            sed -i 's/docker run --rm -it/docker run --rm -i/' Makefile 
            cat Makefile
