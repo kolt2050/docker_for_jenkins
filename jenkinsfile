@@ -11,13 +11,13 @@ node {
     stage('Clone repo') {
         println("HELLO")
            sh """#!/bin/bash
+           echo "---------------ID--------------"
            id
-           ls -la edp-install/
+           #ls -la edp-install/
 
            #rm -rf * 
            #docker rmi -f \$(docker images -q) && docker rm -f \$(docker ps -aq)
 
-           #git clean -fdx
            git clone https://github.com/epam/edp-install.git
            pwd && ls -la
            cd edp-install
