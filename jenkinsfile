@@ -15,7 +15,7 @@ node {
            ls -la edp-install/
 
            #rm -rf * 
-           docker rmi -f \$(docker images -q) && docker rm -f \$(docker ps -aq)
+           #docker rmi -f \$(docker images -q) && docker rm -f \$(docker ps -aq)
 
            git clean -fdx
            git clone https://github.com/epam/edp-install.git
