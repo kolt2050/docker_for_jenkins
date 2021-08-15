@@ -24,8 +24,11 @@ node {
            echo "---------we in edp-install----------"
            pwd 
 
-           sed -i 's/docker build -t edp-docs/docker build edp-docs/' Makefile
-           cat Makefile
+           sed -i 's/docker build -t edp-docs/docker build edp-docs/' ./hack/mkdocs/Dockerfile
+           cat ./hack/mkdocs/Dockerfile
+
+           #sed -i 's/docker build -t edp-docs/docker build edp-docs/' Makefile
+           #cat Makefile
            #make edp-docs-image
 
            sed -i 's/docker run --rm -it/docker run --rm -i/' Makefile 
