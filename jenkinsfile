@@ -18,7 +18,7 @@ node {
            ls -la
            
            cd edp-install
-           #//ls -la
+           ls -la
            echo "---------------build docs--------------"
            docker run --rm -i -v ${PWD}:/docs --entrypoint mkdocs edp-docs build | make
            echo "---------------site is here--------------"
