@@ -15,10 +15,10 @@ node {
            pwd && ls -la
            cd edp-install
            echo "---------we in edp-install----------"
-           $PWD = echo `pwd`
-           pwd
+           #$PWD = echo `pwd`
+           #pwd
            echo "---------------build docs--------------"
-           docker run --rm -i -v ${PWD}:/docs --entrypoint mkdocs edp-docs build && make
+           docker run --rm -i -v /var/lib/jenkins/workspace/test1/edp-install/docs --entrypoint mkdocs edp-docs build && make
            echo "---------------site is here--------------"
            #ls -la ../
            #mv site ../
