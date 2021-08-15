@@ -28,7 +28,8 @@ node {
 
            make build-docs 
            echo "---------------site is here--------------" 
-           ls -la ../ mv site ../
+           ls -la ../ 
+           mv site ../
            #git checkout gh-pages
            ls -la
            #rm -rf *
