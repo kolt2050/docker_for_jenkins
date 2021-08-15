@@ -8,4 +8,12 @@ node {
            sh 'echo 1234'
         }
     }
+    
+    stage('Clone repo') {
+        sh """#!/bin/bash
+           echo "---------------ID--------------"
+
+        """
+
+    }
 }
